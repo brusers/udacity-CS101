@@ -22,6 +22,7 @@ def union(p,q):
             p.append(e)
 
 
+
 def get_all_links(page):
     links = []
     while True:
