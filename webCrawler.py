@@ -98,64 +98,6 @@ def split_string(source,splitlist):
     return output
 	
 	
-	
-# Extra assignment stuff
-'''
-def convert_seconds(seconds):#   2321.428571
-    hour=0
-    min=0
-    sec=0
-    if seconds >= 3600:
-        hour = int(seconds)/3600
-        seconds -= hour*3600
-    if seconds >= 60:
-        print seconds
-        min = int(seconds/60)
-        seconds -= (min*60)
-    sec = seconds
-
-    if hour!=1:
-        hhS = ' hours'
-    else:
-        hhS = ' hour'
-    if min!=1:
-        mmS = ' minutes'
-    else:
-        mmS = ' minute'
-    if sec!=1:
-        ssS = ' seconds'
-    else:
-        ssS = ' second'
-    returnS = str(hour)+str(hhS)+', '+str(min)+str(mmS)+', '+str(sec)+str(ssS)
-    return returnS
-
-def download_time(size, unitS, band, unitB):
-    if unitS == 'kB':
-        size *= 2**10*8
-    elif unitS == 'MB':
-        size *= 2**20*8
-    elif unitS == 'GB':
-        size *= 2**30*8
-    elif unitS == 'TB':
-        size *= 2**40*8
-    elif unitS == 'Tb':
-        size *= 2**40
-        
-    if unitB == 'kB':
-        band *= 2**10*8
-    elif unitB == 'MB':
-        band *= 2**20*8
-    elif unitB == 'kb':
-        band *= 2**10
-    elif unitB == 'Mb':
-        band *= 2**20
-    elif unitB == 'GB':
-        band *= 2**30*8
-        
-    time=float(size)/float(band)
-    output=convert_seconds(time)
-    return output
-'''
 def bucket_find(bucket, key):
 	for entry in bucket:
 		if entry[0] == key:
