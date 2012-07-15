@@ -70,15 +70,7 @@ def lookup(index, keyword):
     if keyword in index:
         return index[keyword]
     return None
-
-''' This is mine
-def lookup(index,keyword):
-	myList=[]
-	for item in index:
-		if item[0] == keyword:
-			myList = item[1]
-	return myList
-'''
+    
 
 def add_page_to_index(index,url,content):
     myList = split_string(content," !,.)
