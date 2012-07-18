@@ -34,23 +34,21 @@ def get_all_links(page):
             break
     return links
 
-def crawl_web(seed,max_depth):	# max_depth not in udacities final code
+def crawl_web(seed):	
 	tocrawl=[seed]
 	crawled=[]
-	next_depth =[]		# not in udacities final code
+	graph = {}
 	index={}
-	depth = 0
-	while tocrawl and depth <= max_depth:
+	while tocrawl:
 		page=tocrawl.pop()
 		if page not in crawled:
 			content=get_page(page)
 			add_page_to_index(index,page,content)
-			union(next_depth, get_all_links(content))
-			crawled.append(page)
-		if not tocrawl:		# whole if statement not in udacities final code
-			tocrawl, next_depth = next_depth, []
-			depth+=1
-	return index
+            outlinks = get_all_links(content)
+            graph[page]=outlinks 
+            union(tocrawl, outlinks)
+            crawled.append(page)
+    return index, graph
 
 def record_user_click(index,keyword,url):
     urls = lookup(index, keyword)
