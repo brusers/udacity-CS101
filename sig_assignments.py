@@ -1,4 +1,12 @@
 ########################################################################
+# These are some of the larger projects associated with the CS101 class 
+# on the Udacity website. Just to show some of the things that the class
+# focused on. It was a very good introductory class. Several of the last
+# projects towards the end of this file are the actual exam questions.
+# You can also find these on the Udacity website posted by other people
+# so I would not consider this a spoiler!
+#
+########################################################################
 # Define a procedure, total_enrollment,
 # that takes as an input a list of elements,
 # where each element is a list containing
